@@ -1,0 +1,18 @@
+<p>
+  top-news works!
+</p>
+<table>
+  <tr *ngFor="let n of news;let i=index">
+   
+  <!-- <td>{{n.Name}}</td> -->
+  <td> <a [routerLink]="['/details',n.ID]">{{n.Name}}</a></td>
+  <!-- <td [class.done-task]="task.Done">
+    <a [routerLink]="['/details',task.ID]">{{task.Title}}</a>
+    </td>
+  <td><input (change)="update(task)" type="checkbox" [checked]="task.Done"> </td>
+  <td>
+    <img *ngIf="task.IsDeleting" src="/assets/ajax-loader.gif">
+    <button *ngIf="!task.IsDeleting" (click)="delete(i)" type="button" class="btn btn-danger">DELETE</button>
+  </td> -->
+</tr>
+</table>

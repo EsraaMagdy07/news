@@ -1,0 +1,20 @@
+<p>
+  student works!
+</p>
+first name <input  #inputFirstName type="text"><br>
+last name <input #inputLastName type="text"><br>
+Age<input #inputAge type="text"><br>
+<input type="button" value="Add Student" (click)="addStudent(inputFirstName.value,inputLastName.value,inputAge.value);inputFirstName.value='';inputLastName.value='';inputAge.value=''">
+{{students.length}}
+ <table>
+  <tr *ngFor="let student of students;let i=index;let isOdd=odd ;let isEven=even" [class.odd]="isOdd" [class.even]="isEven">
+   <td   >{{i+1}}</td>
+   <td [ngClass]="{'red-color':student.age > 30,'green-color':student.age <= 30}">{{student.firstName}}</td>
+   <td >{{student.lastName}}</td>
+   <td><input [(ngModel)]="student.age" type="number"></td>
+   <td><input type="button" value="Delete" (click)="deleteStudent(i)"> </td>
+   <!-- <td><input value="{{student.age}}" type="number"></td> -->
+   <!-- <td><input value="{{student.age}}" ng-class="{'red-color':student.age > 30,{'green-color':student.age <= 30}}" type="number"></td>
+  -->
+  </tr>
+</table>

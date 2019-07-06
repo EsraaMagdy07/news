@@ -1,0 +1,9 @@
+<!-- <h1>Task ID : {{news.ID}}</h1> -->
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top"  src="{{news.Image}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">News ID : {{news.ID}}, {{news.Name}}</h5>
+    <p class="card-text" [innerHtml]="news.Desc"></p>
+    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+  </div>
+</div>
